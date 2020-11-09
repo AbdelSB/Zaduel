@@ -1,0 +1,106 @@
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+/*Background image*/
+.bg {
+    height: 130%;
+    width: 130%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: -2;
+    background-image: url("Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 120%;
+}
+/* Top area */
+.top-area {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left-space {
+    height: 20%;
+    width: 15%;
+}
+
+.counter {
+    width: 35%;
+    height: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-self: center;
+    font-family: sans-serif;
+    font-size: 25rem;
+}
+
+.start {
+    height: 20%;
+    width: 15%;
+}
+
+/* Duel area */
+
+.duel-area {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    padding-top: 2rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    justify-content: space-between;
+
+}
+
+.left-gun {
+    background-image: url("left-gun.png");
+}
+
+.right-gun {
+    background-image: url("right-gun.png");
+}
+
+.left-gun, .right-gun {
+    height : 40rem;
+    width: 40rem;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tw {
+    height : 25rem;
+    width: 25rem;
+    background-image: url("tumbleweed.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.winner {
+    position: absolute;
+    z-index: 100;
+    top: 69%;   
+    font-size: 7rem;
+    width: fit-content;
+    visibility: hidden;
+}
