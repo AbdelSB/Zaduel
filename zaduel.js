@@ -3,6 +3,8 @@ const counter = document.querySelector(".counter");
 const leftGun = document.querySelector(".left-gun");
 const rightGun = document.querySelector(".right-gun");
 const tW = document.querySelector(".tw");
+const boom1 = document.querySelector('.boom1');
+const boom2 = document.querySelector('.boom2');
 let winner = document.querySelector(".winner");
 let start = false;
 
@@ -35,8 +37,6 @@ function startGame() {
 function startCounter() {
     if(i === 3) {
         winner.style.visibility = "hidden";
-        winner.style.left = "";
-        winner.style.right = "";
         counterValue = setTimeout(function countDown(){
             i--;
             counter.textContent = `0${i}`;
@@ -61,24 +61,33 @@ function shoot() {
             if (start === true) {
                 e.preventDefault();
         
-                if(e.key === "a") {
+                if(e.key === "a" || e.key === "A") {
                     leftGun.style.transform = "rotate(-20deg)";
+                    boom1.style.visibility = "visible";
+                    setTimeout(function(){
+                        boom1.style.visibility = "";
+                    }, 40);
+
                     setTimeout(function(){
                         leftGun.style.transform ="";
                     }, 500);
                     winner.style.visibility = "visible";
-                    winner.style.left = "7%";
+                    winner.style.left = "5%";
                     window.removeEventListener("keydown", boom);
                     resetGame();
                 }
         
-                else if(e.key === "l") {
+                else if(e.key === "l" || e.key === "L") {
                     rightGun.style.transform = "rotate(20deg)";
+                    boom2.style.visibility = "visible";
+                    setTimeout(function(){
+                        boom2.style.visibility = "";
+                    }, 40);
                     setTimeout(function(){
                         rightGun.style.transform ="";
                     }, 500);
                     winner.style.visibility = "visible";
-                    winner.style.right = "7%";
+                    winner.style.right = "5%";
                     window.removeEventListener("keydown", boom);
                     resetGame();
                 }
@@ -108,7 +117,7 @@ function tWAnimation() {
         rDegree = 0;
     }
 
-    tW.style.top = `${72+k}%`;
+    tW.style.top = `${70+k}%`;
     tW.style.transform = `rotate(${rDegree}deg`;
 
     console.log(tWPosition);

@@ -1,6 +1,7 @@
 html {
     font-size: 10px;
     box-sizing: border-box;
+    margin: 0;
 }
 
 *, *::before, *::after {
@@ -11,11 +12,12 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    margin: 0;
 }
 /*Background image*/
 .bg {
-    height: 130%;
-    width: 130%;
+    height: 110%;
+    width: 110%;
     position: absolute;
     top: 0;
     left: 0;
@@ -24,12 +26,12 @@ body {
     background-image: url("Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 120%;
+    background-position-y: 100%;
 }
 /* Top area */
 .top-area {
     width: 100%;
-    height: 30%;
+    height: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -48,7 +50,8 @@ body {
     align-items: center;
     justify-self: center;
     font-family: sans-serif;
-    font-size: 25rem;
+    font-size: 15rem;
+    font-weight: bold;
 }
 
 .start {
@@ -60,15 +63,36 @@ body {
 
 .duel-area {
     width: 100%;
-    height: 80%;
+    height: 100%;
     display: flex;
     padding-top: 2rem;
     padding-left: 8rem;
     padding-right: 8rem;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
 
 }
 
+.boom-area {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 33%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 24%;
+    padding-right: 24%;
+    visibility: hidden;
+
+}
+
+.boom1, .boom2 {
+    width: 9%;
+    height: 100%;
+    background-color: coral;
+}
 .left-gun {
     background-image: url("left-gun.png");
 }
@@ -78,16 +102,16 @@ body {
 }
 
 .left-gun, .right-gun {
-    height : 40rem;
-    width: 40rem;
+    height : 30rem;
+    width: 30rem;
     margin: 0;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .tw {
-    height : 25rem;
-    width: 25rem;
+    height : 20rem;
+    width: 20rem;
     background-image: url("tumbleweed.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -99,8 +123,9 @@ body {
 .winner {
     position: absolute;
     z-index: 100;
-    top: 69%;   
+    top: 50%;
     font-size: 7rem;
     width: fit-content;
     visibility: hidden;
+    background-color: white;
 }
