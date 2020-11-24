@@ -82,16 +82,18 @@ body {
     z-index: 2;
     display: flex;
     justify-content: space-between;
-    padding-left: 24%;
-    padding-right: 24%;
+    padding-left: 20%;
+    padding-right: 20%;
     visibility: hidden;
-
 }
 
 .boom1, .boom2 {
-    width: 9%;
+    width: 12%;
     height: 100%;
-    background-color: coral;
+    background-image: url('Fire.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
 }
 .left-gun {
     background-image: url("left-gun.png");
